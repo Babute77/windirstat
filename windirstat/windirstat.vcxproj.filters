@@ -181,6 +181,9 @@
     <ClInclude Include="Controls\AgeChart.h">
       <Filter>Header Files\User Interface\Controls</Filter>
     </ClInclude>
+    <ClInclude Include="Controls\HistoryChart.h">
+      <Filter>Header Files\User Interface\Controls</Filter>
+    </ClInclude>
     <ClInclude Include="Controls\BarChart.h">
       <Filter>Header Files\User Interface\Controls</Filter>
     </ClInclude>
@@ -228,6 +231,9 @@
     </ClInclude>
     <ClInclude Include="ScanHistory.h">
       <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Views\HistoryChartView.h">
+      <Filter>Header Files\User Interface\Views</Filter>
     </ClInclude>
     <ClInclude Include="Views\BarChartView.h">
       <Filter>Header Files\User Interface\Views</Filter>
@@ -474,6 +480,9 @@
     <ClCompile Include="ScanHistory.cpp">
       <Filter>Source Files\Core</Filter>
     </ClCompile>
+    <ClCompile Include="Views\HistoryChartView.cpp">
+      <Filter>Source Files\User Interface\Views</Filter>
+    </ClCompile>
     <ClCompile Include="Views\BarChartView.cpp">
       <Filter>Source Files\User Interface\Views</Filter>
     </ClCompile>
@@ -502,6 +511,9 @@
       <Filter>Source Files\User Interface\Controls</Filter>
     </ClCompile>
     <ClCompile Include="Controls\AgeChart.cpp">
+      <Filter>Source Files\User Interface\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\HistoryChart.cpp">
       <Filter>Source Files\User Interface\Controls</Filter>
     </ClCompile>
     <ClCompile Include="Controls\BarChart.cpp">

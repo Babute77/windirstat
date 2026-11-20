@@ -435,6 +435,7 @@
 #define ID_VIEW_PIECHART                32971
 #define ID_VIEW_AGECHART                32972
 #define ID_VIEW_BARCHART                32974
+#define ID_VIEW_HISTORYCHART            32973
 #define IDS_APP_TITLE                   57344
 #define IDS_AUTHOR_EMAIL                57345
 #define IDS_FILTER_EXAMPLE_DIRS         57346

@@ -46,6 +46,7 @@ enum class GraphPane : std::uint8_t
     PieChart,
     AgeChart,
     BarChart,
+    HistoryChart,
 };
 
 // GraphPaneStyle historically stored treemap layouts (0, 1, 4, 5) alongside
@@ -58,6 +59,7 @@ constexpr GraphPane DecodeGraphPane(const int persisted) noexcept
     if (persisted == 6) return GraphPane::PieChart;
     if (persisted == 7) return GraphPane::AgeChart;
     if (persisted == 9) return GraphPane::BarChart;
+    if (persisted == 8) return GraphPane::HistoryChart;
     return GraphPane::TreeMap;
 }
 
@@ -71,6 +73,7 @@ constexpr int EncodeGraphPane(const GraphPane pane) noexcept
     case GraphPane::PieChart: return 6;
     case GraphPane::AgeChart: return 7;
     case GraphPane::BarChart: return 9;
+    case GraphPane::HistoryChart: return 8;
     }
     return 0;
 }

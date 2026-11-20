@@ -591,6 +591,17 @@ void CMainFrame::OnUpdateViewAgeChart(CCmdUI* pCmdUI) const
     pCmdUI->SetRadio(GetGraphPaneType() == GraphPane::AgeChart);
 }
 
+void CMainFrame::OnViewHistoryChart()
+{
+    SelectGraphPane(GraphPane::HistoryChart);
+}
+
+void CMainFrame::OnUpdateViewHistoryChart(CCmdUI* pCmdUI) const
+{
+    pCmdUI->Enable(!CWinDirStatModel::Get()->IsScanRunning());
+    pCmdUI->SetRadio(GetGraphPaneType() == GraphPane::HistoryChart);
+}
+
 void CMainFrame::OnViewBarChart()
 {
     SelectGraphPane(GraphPane::BarChart);
