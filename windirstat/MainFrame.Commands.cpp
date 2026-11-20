@@ -569,6 +569,17 @@ void CMainFrame::OnUpdateViewSunburst(CCmdUI* pCmdUI) const
     pCmdUI->SetRadio(GetGraphPaneType() == GraphPane::Sunburst);
 }
 
+void CMainFrame::OnViewPieChart()
+{
+    SelectGraphPane(GraphPane::PieChart);
+}
+
+void CMainFrame::OnUpdateViewPieChart(CCmdUI* pCmdUI) const
+{
+    pCmdUI->Enable(!CWinDirStatModel::Get()->IsScanRunning());
+    pCmdUI->SetRadio(GetGraphPaneType() == GraphPane::PieChart);
+}
+
 static void SortItemRecursive(CItem* item)
 {
     if (item == nullptr || item->IsLeaf()) return;
