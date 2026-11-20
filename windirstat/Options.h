@@ -159,6 +159,8 @@ class COptions final
     inline static constexpr std::wstring_view OptionsTopView = L"TopView";
     inline static constexpr std::wstring_view OptionsSearch = L"SearchView";
     inline static constexpr std::wstring_view OptionsWatcher = L"Watcher";
+    inline static constexpr std::wstring_view OptionsChangeSize = L"ChangeSizeView";
+    inline static constexpr std::wstring_view OptionsChangeFiles = L"ChangeFilesView";
     inline static constexpr std::wstring_view OptionsPerms = L"PermissionsView";
     inline static constexpr std::wstring_view OptionsDriveSelect = L"DriveSelect";
 
@@ -367,6 +369,12 @@ public:
     inline static Setting<std::vector<int>> WatcherColumnOrder{ OptionsWatcher, L"ColumnOrder" };
     inline static Setting<std::vector<int>> WatcherColumnWidths{ OptionsWatcher, L"ColumnWidths" };
     inline static Setting<std::vector<int>> WatcherColumnVisibility{ OptionsWatcher, L"ColumnVisibility" };
+    inline static Setting<std::vector<int>> ChangeSizeColumnOrder{ OptionsChangeSize, L"ColumnOrder" };
+    inline static Setting<std::vector<int>> ChangeSizeColumnWidths{ OptionsChangeSize, L"ColumnWidths" };
+    inline static Setting<std::vector<int>> ChangeSizeColumnVisibility{ OptionsChangeSize, L"ColumnVisibility" };
+    inline static Setting<std::vector<int>> ChangeFilesColumnOrder{ OptionsChangeFiles, L"ColumnOrder" };
+    inline static Setting<std::vector<int>> ChangeFilesColumnWidths{ OptionsChangeFiles, L"ColumnWidths" };
+    inline static Setting<std::vector<int>> ChangeFilesColumnVisibility{ OptionsChangeFiles, L"ColumnVisibility" };
     inline static Setting<std::vector<int>> PermsViewColumnOrder{ OptionsPerms, L"ColumnOrder" };
     inline static Setting<std::vector<int>> PermsViewColumnWidths{ OptionsPerms, L"ColumnWidths" };
     inline static Setting<std::vector<int>> PermsViewColumnVisibility{ OptionsPerms, L"ColumnVisibility" };

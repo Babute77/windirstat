@@ -930,6 +930,7 @@ CTreeListControl* CWinDirStatModel::GetFocusControl()
     if (SearchListHasFocus()) return CFileSearchControl::Get();
     if (WatcherListHasFocus()) return CFileWatcherControl::Get();
     if (PermsListHasFocus()) return CFilePermsControl::Get();
+    if (auto* changes = CFileChangeControl::GetFocused()) return changes;
     return CFileTreeControl::Get();
 }
 
@@ -952,7 +953,8 @@ std::span<CItem* const> CWinDirStatModel::GetSelectedItemsView()
 {
     // Check if we can use cached results
     const auto currentFocus = CMainFrame::Get()->GetLogicalFocus();
-    if (m_selectionCacheValid && m_cachedFocus == currentFocus)
+    // Change lists share no logical focus, so their selection is never served from the cache
+    if (m_selectionCacheValid && m_cachedFocus == currentFocus && CFileChangeControl::GetFocused() == nullptr)
     {
         return m_cachedSelection;
     }

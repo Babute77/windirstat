@@ -115,6 +115,7 @@
 #define IDC_PREVIEW                     1084
 #define IDC_PROCESS_HARDLINKS           1085
 #define IDC_SCAN_WSL_DISKS              1204
+#define IDC_CHANGE_BASELINE             1205
 #define IDC_PROCESS_PRIORITY            1086
 #define IDC_PROGRESS_BAR                1087
 #define IDC_PROGRESS_MESSAGE            1088
@@ -450,7 +451,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        126
 #define _APS_NEXT_COMMAND_VALUE         32975
-#define _APS_NEXT_CONTROL_VALUE         1205
+#define _APS_NEXT_CONTROL_VALUE         1206
 #define _APS_NEXT_SYMED_VALUE           126
 #endif
 #endif
