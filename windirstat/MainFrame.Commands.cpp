@@ -580,6 +580,17 @@ void CMainFrame::OnUpdateViewPieChart(CCmdUI* pCmdUI) const
     pCmdUI->SetRadio(GetGraphPaneType() == GraphPane::PieChart);
 }
 
+void CMainFrame::OnViewAgeChart()
+{
+    SelectGraphPane(GraphPane::AgeChart);
+}
+
+void CMainFrame::OnUpdateViewAgeChart(CCmdUI* pCmdUI) const
+{
+    pCmdUI->Enable(!CWinDirStatModel::Get()->IsScanRunning());
+    pCmdUI->SetRadio(GetGraphPaneType() == GraphPane::AgeChart);
+}
+
 static void SortItemRecursive(CItem* item)
 {
     if (item == nullptr || item->IsLeaf()) return;

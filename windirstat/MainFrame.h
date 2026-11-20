@@ -287,6 +287,8 @@ protected:
     void OnUpdateViewSunburst(CCmdUI* pCmdUI) const;
     void OnViewPieChart();
     void OnUpdateViewPieChart(CCmdUI* pCmdUI) const;
+    void OnViewAgeChart();
+    void OnUpdateViewAgeChart(CCmdUI* pCmdUI) const;
     void OnViewTreeMapSize(UINT commandId);
     void OnViewAbsolutePercentages() const;
     void OnViewShowFileTypes();
@@ -404,6 +406,7 @@ inline std::span<const RouteEntry> CMainFrame::Routes()
         Route::Command<&OnViewFlameGraph>(ID_VIEW_FLAMEGRAPH),
         Route::Command<&OnViewSunburst>(ID_VIEW_SUNBURST),
         Route::Command<&OnViewPieChart>(ID_VIEW_PIECHART),
+        Route::Command<&OnViewAgeChart>(ID_VIEW_AGECHART),
         Route::Command<&OnViewTreeMapSize>(ID_TREEMAP_LOGICAL_SIZE),
         Route::Command<&OnViewTreeMapSize>(ID_TREEMAP_PHYSICAL_SIZE),
         Route::Command<&OnViewAbsolutePercentages>(ID_VIEW_ABSOLUTE_PERCENTAGES),
@@ -419,6 +422,7 @@ inline std::span<const RouteEntry> CMainFrame::Routes()
         Route::Update<&OnUpdateViewFlameGraph>(ID_VIEW_FLAMEGRAPH),
         Route::Update<&OnUpdateViewSunburst>(ID_VIEW_SUNBURST),
         Route::Update<&OnUpdateViewPieChart>(ID_VIEW_PIECHART),
+        Route::Update<&OnUpdateViewAgeChart>(ID_VIEW_AGECHART),
         Route::Update<&OnUpdateViewShowFileTypes>(ID_VIEW_SHOWFILETYPES),
         Route::Update<&OnUpdateViewGroupUnregisteredTypes>(ID_VIEW_GROUP_TYPES),
         Route::Update<&OnUpdateTreeMapUseLogical>(ID_TREEMAP_LOGICAL_SIZE),
